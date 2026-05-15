@@ -1068,3 +1068,32 @@ grid-template-columns:1fr;
 }
 
 }
+
+/* SELECT E ÁREA */
+
+.busca-cidade select,
+.busca-cidade input{
+
+padding:18px;
+
+border:none;
+
+border-radius:15px;
+
+font-size:17px;
+
+outline:none;
+
+background:rgba(255,255,255,0.08);
+
+color:white;
+
+min-width:280px;
+
+}
+
+.busca-cidade select option{
+
+background:#07140b;
+
+}
