@@ -690,3 +690,246 @@ entry.target.classList.add('show');
 
 document.querySelectorAll('.hidden')
 .forEach((el)=>observer.observe(el));
+
+// ================================
+// DIAGNÓSTICO AGRÍCOLA IA
+// ================================
+
+function analisarCidade(){
+
+const cidade = document
+.getElementById('cidadeInput')
+.value
+.toLowerCase();
+
+const resultado = document
+.getElementById('resultadoCidade');
+
+
+// =====================================
+// GUARAPUAVA
+// =====================================
+
+if(
+cidade.includes('guarapuava')
+){
+
+resultado.innerHTML = `
+
+<h3>
+📍 Guarapuava - PR
+</h3>
+
+<p>
+
+✅ Região de clima frio <br>
+✅ Excelente para cultivos de inverno <br>
+✅ Alta umidade e solo fértil
+
+</p>
+
+<div class="cultivos-grid">
+
+<div class="cultivo-card">
+
+<h4>🍓 Morango</h4>
+
+<p>
+
+💰 Lucro: Alto <br>
+🌡️ Clima ideal: Frio <br>
+⏳ Colheita: 60 a 90 dias <br>
+🏪 Venda:
+Feiras, mercados e docerias
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h4>🌿 Erva-mate</h4>
+
+<p>
+
+💰 Lucro: Alto <br>
+🌡️ Clima ideal: Frio e úmido <br>
+⏳ Produção duradoura <br>
+🏪 Venda:
+Indústrias e cooperativas
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h4>🥬 Alface</h4>
+
+<p>
+
+💰 Lucro: Médio <br>
+🌡️ Clima ideal: Temperado <br>
+⏳ Colheita rápida <br>
+🏪 Venda:
+Mercados e restaurantes
+
+</p>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+
+// =====================================
+// CURITIBA
+// =====================================
+
+else if(
+cidade.includes('curitiba')
+){
+
+resultado.innerHTML = `
+
+<h3>
+📍 Curitiba - PR
+</h3>
+
+<p>
+
+✅ Região com clima subtropical <br>
+✅ Boa para hortaliças e frutas frias
+
+</p>
+
+<div class="cultivos-grid">
+
+<div class="cultivo-card">
+
+<h4>🍇 Uva</h4>
+
+<p>
+
+💰 Lucro: Alto <br>
+🌡️ Clima ideal: Frio moderado <br>
+🏪 Venda:
+Mercados e vinícolas
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h4>🥦 Brócolis</h4>
+
+<p>
+
+💰 Lucro: Médio <br>
+🌡️ Clima ideal: Fresco <br>
+🏪 Venda:
+Mercados locais
+
+</p>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+
+// =====================================
+// CASCAVEL
+// =====================================
+
+else if(
+cidade.includes('cascavel')
+){
+
+resultado.innerHTML = `
+
+<h3>
+📍 Cascavel - PR
+</h3>
+
+<p>
+
+✅ Região forte no agronegócio <br>
+✅ Excelente para grãos e produção intensiva
+
+</p>
+
+<div class="cultivos-grid">
+
+<div class="cultivo-card">
+
+<h4>🌽 Milho</h4>
+
+<p>
+
+💰 Lucro: Alto <br>
+🌡️ Clima ideal: Quente <br>
+🏪 Venda:
+Cooperativas e indústrias
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h4>🌱 Soja</h4>
+
+<p>
+
+💰 Lucro: Alto <br>
+🌡️ Produção em larga escala <br>
+🏪 Exportação e cooperativas
+
+</p>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+
+// =====================================
+// CIDADE NÃO ENCONTRADA
+// =====================================
+
+else{
+
+resultado.innerHTML = `
+
+<h3>
+❌ Cidade não encontrada
+</h3>
+
+<p>
+
+Tente pesquisar cidades como:
+
+<br><br>
+
+📍 Guarapuava <br>
+📍 Curitiba <br>
+📍 Cascavel
+
+</p>
+
+`;
+
+}
+
+}
