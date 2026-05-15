@@ -1130,3 +1130,28 @@ Tente pesquisar outra cidade.
 }
 
 }
+
+function buscarCultivos(){
+
+const resultado =
+document.getElementById(
+'resultadoCultivos'
+);
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>🌱 TESTE FUNCIONANDO</h3>
+
+<p>
+
+O JavaScript está funcionando corretamente.
+
+</p>
+
+</div>
+
+`;
+
+}
