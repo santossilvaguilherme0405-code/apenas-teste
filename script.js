@@ -940,40 +940,66 @@ Tente pesquisar cidades como:
 
 function buscarCultivos(){
 
-const cidade = document
-.getElementById('cidadeInput')
-.value
-.toLowerCase();
+const cidade =
+document.getElementById(
+'cidadeInput'
+).value.toLowerCase();
 
-const resultado = document
-.getElementById('resultadoCultivos');
+const porte =
+document.getElementById(
+'porteSelect'
+).value;
+
+const area =
+document.getElementById(
+'areaInput'
+).value;
+
+const resultado =
+document.getElementById(
+'resultadoCultivos'
+);
 
 
-// GUARAPUAVA
+// SEM DADOS
 
 if(
-cidade.includes('guarapuava')
+cidade == '' ||
+porte == '' ||
+area == ''
 ){
 
 resultado.innerHTML = `
 
 <div class="cultivo-card">
 
-<h3>🌱 Erva-mate</h3>
+<h3>⚠️ Preencha todos os campos</h3>
 
 <p>
 
-✅ Excelente para clima frio.<br><br>
-
-💰 Pode virar:
-chá, tereré e exportação.<br><br>
-
-🛒 Vendas:
-mercados, cooperativas e feiras.
+Digite a cidade, escolha o porte
+e informe o tamanho da área.
 
 </p>
 
 </div>
+
+`;
+
+return;
+
+}
+
+
+// GUARAPUAVA
+
+if(cidade.includes('guarapuava')){
+
+// PEQUENO
+
+if(porte == 'pequeno'){
+
+resultado.innerHTML = `
 
 <div class="cultivo-card">
 
@@ -981,48 +1007,16 @@ mercados, cooperativas e feiras.
 
 <p>
 
-✅ Boa produção em clima ameno.<br><br>
+✅ Ideal para pequenas áreas.<br><br>
 
-💰 Pode virar:
-geleias, doces e polpas.<br><br>
+💰 Boa lucratividade.<br><br>
 
-🛒 Vendas:
-mercados, docerias e feiras.
-
-</p>
-
-</div>
-
-<div class="cultivo-card">
-
-<h3>🌽 Milho</h3>
-
-<p>
-
-✅ Produção forte na região.<br><br>
-
-💰 Pode virar:
-ração, farinha e pamonha.<br><br>
-
-🛒 Vendas:
-cooperativas e agroindústrias.
+🛒 Venda:
+feiras, mercados e doces.
 
 </p>
 
 </div>
-
-`;
-
-}
-
-
-// CURITIBA
-
-else if(
-cidade.includes('curitiba')
-){
-
-resultado.innerHTML = `
 
 <div class="cultivo-card">
 
@@ -1030,27 +1024,11 @@ resultado.innerHTML = `
 
 <p>
 
-✅ Ótimo para hortas urbanas.<br><br>
+✅ Crescimento rápido.<br><br>
 
-💰 Pode vender fresco.<br><br>
+💰 Fácil de vender.<br><br>
 
-🛒 Mercados e feiras.
-
-</p>
-
-</div>
-
-<div class="cultivo-card">
-
-<h3>🍅 Tomate</h3>
-
-<p>
-
-✅ Boa adaptação climática.<br><br>
-
-💰 Molhos e vendas naturais.<br><br>
-
-🛒 Restaurantes e mercados.
+🛒 Hortifrútis e feiras.
 
 </p>
 
@@ -1061,11 +1039,124 @@ resultado.innerHTML = `
 }
 
 
-// REGIÃO QUENTE
+// MÉDIO
+
+else if(porte == 'medio'){
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>🌽 Milho</h3>
+
+<p>
+
+✅ Boa produtividade.<br><br>
+
+💰 Forte mercado agrícola.<br><br>
+
+🛒 Cooperativas e cerealistas.
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h3>🌱 Erva-mate</h3>
+
+<p>
+
+✅ Excelente para o clima local.<br><br>
+
+💰 Alta procura regional.<br><br>
+
+🛒 Indústrias e mercados.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+
+// GRANDE
+
+else{
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>🌾 Soja</h3>
+
+<p>
+
+✅ Excelente para grandes áreas.<br><br>
+
+💰 Alta demanda mundial.<br><br>
+
+🛒 Exportação e cooperativas.
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h3>🌽 Milho em larga escala</h3>
+
+<p>
+
+✅ Forte produção agrícola.<br><br>
+
+💰 Mercado constante.<br><br>
+
+🛒 Agroindústrias.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+}
+
+
+// CURITIBA
+
+else if(cidade.includes('curitiba')){
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>🥬 Hortaliças</h3>
+
+<p>
+
+✅ Excelente para região urbana.<br><br>
+
+🛒 Mercados locais.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+
+// SALVADOR / BAHIA
 
 else if(
-cidade.includes('bahia') ||
-cidade.includes('salvador')
+cidade.includes('salvador') ||
+cidade.includes('bahia')
 ){
 
 resultado.innerHTML = `
@@ -1076,11 +1167,9 @@ resultado.innerHTML = `
 
 <p>
 
-✅ Excelente em clima quente.<br><br>
+✅ Clima tropical ideal.<br><br>
 
-💰 Água de coco e doces.<br><br>
-
-🛒 Praias, mercados e feiras.
+🛒 Praias e mercados.
 
 </p>
 
@@ -1092,11 +1181,9 @@ resultado.innerHTML = `
 
 <p>
 
-✅ Clima ideal para produção.<br><br>
+✅ Forte produção regional.<br><br>
 
-💰 Chocolate artesanal.<br><br>
-
-🛒 Indústrias e lojas.
+🛒 Chocolates artesanais.
 
 </p>
 
@@ -1107,7 +1194,7 @@ resultado.innerHTML = `
 }
 
 
-// CIDADE NÃO ENCONTRADA
+// NÃO ENCONTRADA
 
 else{
 
@@ -1115,11 +1202,12 @@ resultado.innerHTML = `
 
 <div class="cultivo-card">
 
-<h3>⚠️ Cidade não encontrada</h3>
+<h3>⚠️ Região ainda não cadastrada</h3>
 
 <p>
 
-Tente pesquisar outra cidade.
+Em breve teremos mais cidades
+e recomendações agrícolas.
 
 </p>
 
