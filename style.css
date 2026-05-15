@@ -680,3 +680,198 @@ flex-direction:column;
 }
 
 }
+
+/* ===============================
+DIAGNÓSTICO AGRÍCOLA
+=============================== */
+
+.diagnostic-section{
+padding:100px 5%;
+text-align:center;
+position:relative;
+z-index:1;
+}
+
+.diagnostic-subtitle{
+font-size:22px;
+margin-top:-20px;
+margin-bottom:50px;
+color:#c7ffd7;
+}
+
+.diagnostic-box{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:50px;
+}
+
+.diagnostic-box input{
+width:400px;
+max-width:90%;
+padding:20px;
+border:none;
+border-radius:20px;
+outline:none;
+font-size:18px;
+
+background:rgba(255,255,255,0.08);
+color:white;
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(0,255,136,0.2);
+
+transition:0.3s;
+}
+
+.diagnostic-box input:focus{
+border:1px solid #00ff88;
+box-shadow:0 0 20px rgba(0,255,136,0.3);
+}
+
+.diagnostic-box input::placeholder{
+color:#d6d6d6;
+}
+
+.diagnostic-box button{
+padding:20px 35px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+
+font-size:18px;
+font-weight:bold;
+
+background:
+linear-gradient(
+45deg,
+#00ff88,
+#00c853
+);
+
+color:#07140b;
+
+transition:0.4s;
+}
+
+.diagnostic-box button:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px rgba(0,255,136,0.4);
+}
+
+/* RESULTADO */
+
+.resultado-cidade{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:40px;
+
+border-radius:30px;
+
+background:
+rgba(255,255,255,0.05);
+
+backdrop-filter:blur(10px);
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+text-align:left;
+
+transition:0.4s;
+}
+
+.resultado-cidade h3{
+font-size:35px;
+margin-bottom:20px;
+color:#00ff88;
+}
+
+.resultado-cidade p{
+font-size:20px;
+line-height:1.8;
+}
+
+/* CARDS CULTIVOS */
+
+.cultivos-grid{
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+}
+
+.cultivo-card{
+
+background:
+rgba(255,255,255,0.05);
+
+padding:30px;
+
+border-radius:25px;
+
+transition:0.4s;
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+}
+
+.cultivo-card:hover{
+
+transform:
+translateY(-10px) scale(1.03);
+
+box-shadow:
+0 0 30px rgba(0,255,136,0.25);
+
+}
+
+.cultivo-card h4{
+font-size:28px;
+margin-bottom:20px;
+color:#7CFF88;
+}
+
+.cultivo-card p{
+font-size:17px;
+line-height:1.8;
+}
+
+/* MODO CLARO */
+
+.light-mode .resultado-cidade,
+.light-mode .cultivo-card{
+
+background:white !important;
+color:#111 !important;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.diagnostic-subtitle{
+font-size:18px;
+}
+
+.resultado-cidade{
+padding:25px;
+}
+
+.resultado-cidade h3{
+font-size:28px;
+}
+
+}
