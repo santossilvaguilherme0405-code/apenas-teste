@@ -875,3 +875,207 @@ font-size:28px;
 }
 
 }
+
+/* ====================================== */
+/* DIAGNÓSTICO AGRÍCOLA */
+/* ====================================== */
+
+.diagnostico-section{
+
+padding:100px 5%;
+
+text-align:center;
+
+}
+
+.diagnostico-texto{
+
+font-size:22px;
+
+margin-bottom:50px;
+
+opacity:0.9;
+
+}
+
+.diagnostico-box{
+
+max-width:1100px;
+
+margin:auto;
+
+background:rgba(255,255,255,0.05);
+
+padding:40px;
+
+border-radius:30px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 0 30px rgba(0,255,136,0.08);
+
+}
+
+.busca-cidade{
+
+display:flex;
+
+gap:20px;
+
+justify-content:center;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+margin-bottom:40px;
+
+}
+
+.busca-cidade label{
+
+font-size:20px;
+
+font-weight:600;
+
+}
+
+.busca-cidade input{
+
+padding:18px;
+
+width:320px;
+
+border:none;
+
+border-radius:15px;
+
+outline:none;
+
+font-size:18px;
+
+background:rgba(255,255,255,0.08);
+
+color:white;
+
+}
+
+.busca-cidade input::placeholder{
+
+color:rgba(255,255,255,0.6);
+
+}
+
+.busca-cidade button{
+
+padding:18px 30px;
+
+border:none;
+
+border-radius:15px;
+
+background:linear-gradient(45deg,#00ff88,#00c853);
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.busca-cidade button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 25px rgba(0,255,136,0.4);
+
+}
+
+/* RESULTADOS */
+
+#resultadoCultivos{
+
+margin-top:30px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+}
+
+.cultivo-card{
+
+background:rgba(255,255,255,0.05);
+
+padding:25px;
+
+border-radius:25px;
+
+text-align:left;
+
+transition:0.4s;
+
+border:1px solid rgba(255,255,255,0.08);
+
+}
+
+.cultivo-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 25px rgba(0,255,136,0.25);
+
+}
+
+.cultivo-card h3{
+
+font-size:26px;
+
+margin-bottom:15px;
+
+color:#00ff88;
+
+}
+
+.cultivo-card p{
+
+line-height:1.8;
+
+font-size:17px;
+
+}
+
+/* MODO CLARO */
+
+.light-mode .diagnostico-box,
+.light-mode .cultivo-card{
+
+background:white !important;
+
+color:#111 !important;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.busca-cidade{
+
+flex-direction:column;
+
+}
+
+.busca-cidade input{
+
+width:100%;
+
+}
+
+}
