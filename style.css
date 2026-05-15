@@ -994,35 +994,6 @@ box-shadow:0 0 25px rgba(0,255,136,0.4);
 
 }
 
-/* MODO CLARO */
-
-.light-mode .diagnostico-box,
-.light-mode .cultivo-card{
-
-background:white !important;
-
-color:#111 !important;
-
-}
-
-/* RESPONSIVO */
-
-@media(max-width:768px){
-
-.busca-cidade{
-
-flex-direction:column;
-
-}
-
-.busca-cidade input{
-
-width:100%;
-
-}
-
-}
-
 /* ====================================== */
 /* RESULTADO CULTIVOS */
 /* ====================================== */
