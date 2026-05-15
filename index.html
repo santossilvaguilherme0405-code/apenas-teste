@@ -92,6 +92,7 @@
                     <li><a href="#tecnologias">Tecnologias</a></li>
                     <li><a href="#mapa">Clima</a></li>
                     <li><a href="#mapa">Mapa</a></li>
+                    <li><a href="#diagnostico">Diagnóstico</a></li>
                 </ul>
 
                 <!-- Botões -->
@@ -173,6 +174,58 @@
 
 </section>
 
+<!-- ====================================== -->
+<!-- DIAGNÓSTICO AGRÍCOLA -->
+<!-- ====================================== -->
+
+<section class="diagnostico-section hidden" id="diagnostico">
+
+    <h2 class="title">
+        🌾 Diagnóstico Inteligente Agrícola
+    </h2>
+
+    <p class="diagnostico-texto">
+
+        Descubra os melhores tipos de cultivo para sua região,
+        clima e produção rural.
+
+    </p>
+
+    <div class="diagnostico-box">
+
+        <!-- Busca -->
+        <div class="busca-cidade">
+
+            <label>
+                📍 Digite sua cidade
+            </label>
+
+            <input
+                type="text"
+                id="cidadeInput"
+                placeholder="Ex: Guarapuava">
+
+            <button onclick="buscarCultivos()">
+
+                Buscar Cultivos
+
+            </button>
+
+        </div>
+
+        <!-- Resultado -->
+        <div id="resultadoCultivos">
+
+            <h3>
+                🌱 Os resultados aparecerão aqui
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+        
 <!-- Tecnologias -->
 <section class="section hidden" id="tecnologias">
     
