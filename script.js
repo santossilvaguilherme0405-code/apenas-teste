@@ -933,3 +933,200 @@ Tente pesquisar cidades como:
 }
 
 }
+
+// ======================================
+// DIAGNÓSTICO AGRÍCOLA
+// ======================================
+
+function buscarCultivos(){
+
+const cidade = document
+.getElementById('cidadeInput')
+.value
+.toLowerCase();
+
+const resultado = document
+.getElementById('resultadoCultivos');
+
+
+// GUARAPUAVA
+
+if(
+cidade.includes('guarapuava')
+){
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>🌱 Erva-mate</h3>
+
+<p>
+
+✅ Excelente para clima frio.<br><br>
+
+💰 Pode virar:
+chá, tereré e exportação.<br><br>
+
+🛒 Vendas:
+mercados, cooperativas e feiras.
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h3>🍓 Morango</h3>
+
+<p>
+
+✅ Boa produção em clima ameno.<br><br>
+
+💰 Pode virar:
+geleias, doces e polpas.<br><br>
+
+🛒 Vendas:
+mercados, docerias e feiras.
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h3>🌽 Milho</h3>
+
+<p>
+
+✅ Produção forte na região.<br><br>
+
+💰 Pode virar:
+ração, farinha e pamonha.<br><br>
+
+🛒 Vendas:
+cooperativas e agroindústrias.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+
+// CURITIBA
+
+else if(
+cidade.includes('curitiba')
+){
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>🥬 Alface</h3>
+
+<p>
+
+✅ Ótimo para hortas urbanas.<br><br>
+
+💰 Pode vender fresco.<br><br>
+
+🛒 Mercados e feiras.
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h3>🍅 Tomate</h3>
+
+<p>
+
+✅ Boa adaptação climática.<br><br>
+
+💰 Molhos e vendas naturais.<br><br>
+
+🛒 Restaurantes e mercados.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+
+// REGIÃO QUENTE
+
+else if(
+cidade.includes('bahia') ||
+cidade.includes('salvador')
+){
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>🥥 Coco</h3>
+
+<p>
+
+✅ Excelente em clima quente.<br><br>
+
+💰 Água de coco e doces.<br><br>
+
+🛒 Praias, mercados e feiras.
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h3>🍫 Cacau</h3>
+
+<p>
+
+✅ Clima ideal para produção.<br><br>
+
+💰 Chocolate artesanal.<br><br>
+
+🛒 Indústrias e lojas.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+
+// CIDADE NÃO ENCONTRADA
+
+else{
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>⚠️ Cidade não encontrada</h3>
+
+<p>
+
+Tente pesquisar outra cidade.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+}
