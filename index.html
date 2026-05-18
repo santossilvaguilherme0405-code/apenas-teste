@@ -154,16 +154,78 @@
         <!-- Busca -->
         <div class="busca-cidade">
 
-            <label>
-                📍 Digite sua cidade
-            </label>
+    <label>
+        📍 Digite sua cidade do Paraná
+    </label>
 
-            <input
-                type="text"
-                id="cidadeInput"
-                placeholder="Ex: Guarapuava">
+    <input
+        type="text"
+        id="cidadeInput"
+        placeholder="Ex: Guarapuava"
+        autocomplete="off">
 
-            <div id="sugestoesCidade"></div>
+    <div id="sugestoesCidade"></div>
+
+</div>
+
+<div class="filtros-agro">
+
+    <div class="filtro-box">
+
+        <label>
+            🚜 Porte da Produção
+        </label>
+
+        <select id="porte">
+
+            <option value="">
+                Selecione
+            </option>
+
+            <option value="pequeno">
+                Pequeno Porte
+            </option>
+
+            <option value="medio">
+                Médio Porte
+            </option>
+
+            <option value="grande">
+                Grande Porte
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="filtro-box">
+
+        <label>
+            🌱 Tamanho da Área
+        </label>
+
+        <input
+            type="number"
+            id="area"
+            placeholder="Ex: 15">
+
+        <small>
+            Área em hectares
+        </small>
+
+    </div>
+
+</div>
+
+<button
+    class="btn-agro"
+    onclick="analisarRegiao()">
+
+    🔍 Analisar Região
+
+</button>
+
+<div id="resultadoAgro"></div>
             
             <!-- Porte -->
 
