@@ -1142,3 +1142,40 @@ gap:10px;
 font-size:30px;
 
 }
+
+/* ====================================== */
+/* INFO DOS CULTIVOS */
+/* ====================================== */
+
+.info-item{
+
+background:
+rgba(255,255,255,0.05);
+
+padding:14px 18px;
+
+border-radius:14px;
+
+margin-top:14px;
+
+font-size:17px;
+
+line-height:1.6;
+
+border-left:
+4px solid #00ff88;
+
+}
+
+.info-item b{
+
+color:#7CFF88;
+
+}
+
+.light-mode .info-item{
+
+background:
+rgba(0,0,0,0.04);
+
+}
