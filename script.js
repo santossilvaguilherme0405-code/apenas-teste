@@ -734,29 +734,51 @@ resultado.innerHTML = `
 
 <div class="cultivo-card">
 
+<div class="cultivo-card">
+
 <h3>🍓 Morango</h3>
 
-<p>
+<div class="info-item">
 
-🌡️ Clima ideal:
-Frio e ameno.<br><br>
+<b>🌡️ Clima ideal:</b>
+Frio e ameno
 
-⏳ Tempo de colheita:
-60 a 80 dias.<br><br>
+</div>
 
-💰 Lucro estimado:
-ALTO.<br><br>
+<div class="info-item">
 
-📦 Produtos derivados:
-geleia, polpa, doces, bolo e suco.<br><br>
+<b>⏳ Colheita:</b>
+60 a 80 dias
 
-🛒 Onde vender:
-feiras, mercados, docerias e vendas locais.<br><br>
+</div>
 
-📏 Área recomendada:
-pequenas propriedades.
+<div class="info-item">
 
-</p>
+<b>💰 Lucro:</b>
+Alto
+
+</div>
+
+<div class="info-item">
+
+<b>📦 Produtos:</b>
+geleia, doces, polpas e sucos
+
+</div>
+
+<div class="info-item">
+
+<b>🛒 Vendas:</b>
+feiras, mercados e docerias
+
+</div>
+
+<div class="info-item">
+
+<b>📏 Área ideal:</b>
+pequenas propriedades
+
+</div>
 
 </div>
 
