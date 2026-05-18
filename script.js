@@ -1308,3 +1308,96 @@ e recomendações agrícolas.
 }
 
 }
+
+// ======================================
+// LISTA DE CIDADES
+// ======================================
+
+const cidades = [
+
+'Guarapuava',
+'Curitiba',
+'Londrina',
+'Maringá',
+'Cascavel',
+'Ponta Grossa',
+'Guaratuba',
+'Guaíra',
+'Salvador',
+'Bahia'
+
+];
+
+
+// ======================================
+// AUTOCOMPLETE
+// ======================================
+
+const cidadeInput =
+document.getElementById(
+'cidadeInput'
+);
+
+cidadeInput.addEventListener(
+'input',
+mostrarSugestoes
+);
+
+function mostrarSugestoes(){
+
+const valor =
+cidadeInput.value.toLowerCase();
+
+const sugestoes =
+document.getElementById(
+'sugestoesCidade'
+);
+
+sugestoes.innerHTML = '';
+
+if(valor.length < 1){
+
+return;
+
+}
+
+const filtradas =
+cidades.filter(cidade =>
+
+cidade.toLowerCase()
+.includes(valor)
+
+);
+
+filtradas.forEach(cidade => {
+
+sugestoes.innerHTML += `
+
+<div
+class="sugestao-item"
+onclick="selecionarCidade('${cidade}')">
+
+${cidade}
+
+</div>
+
+`;
+
+});
+
+}
+
+
+// ======================================
+// SELECIONAR CIDADE
+// ======================================
+
+function selecionarCidade(cidade){
+
+cidadeInput.value = cidade;
+
+document.getElementById(
+'sugestoesCidade'
+).innerHTML = '';
+
+}
