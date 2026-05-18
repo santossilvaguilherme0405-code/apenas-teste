@@ -1221,25 +1221,313 @@ e recomendações agrícolas.
 
 function buscarCultivos(){
 
+const cidade =
+document.getElementById(
+'cidadeInput'
+).value.toLowerCase();
+
+const porte =
+document.getElementById(
+'porteSelect'
+).value;
+
+const area =
+document.getElementById(
+'areaInput'
+).value;
+
 const resultado =
 document.getElementById(
 'resultadoCultivos'
 );
 
+
+// CAMPOS VAZIOS
+
+if(
+cidade == '' ||
+porte == '' ||
+area == ''
+){
+
 resultado.innerHTML = `
 
 <div class="cultivo-card">
 
-<h3>🌱 TESTE FUNCIONANDO</h3>
+<h3>⚠️ Preencha todos os campos</h3>
 
 <p>
 
-O JavaScript está funcionando corretamente.
+Digite a cidade, escolha o porte
+e informe o tamanho da área.
 
 </p>
 
 </div>
 
 `;
+
+return;
+
+}
+
+
+// ======================================
+// GUARAPUAVA
+// ======================================
+
+if(cidade.includes('guarapuava')){
+
+
+// PEQUENO PRODUTOR
+
+if(porte == 'pequeno'){
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>🍓 Morango</h3>
+
+<p>
+
+✅ Ideal para pequenas áreas.<br><br>
+
+🌡️ Clima favorável.<br><br>
+
+💰 Pode produzir:
+geleias, doces e polpas.<br><br>
+
+🛒 Venda:
+feiras, mercados e docerias.
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h3>🥬 Alface</h3>
+
+<p>
+
+✅ Crescimento rápido.<br><br>
+
+💧 Baixo custo inicial.<br><br>
+
+🛒 Venda:
+mercados e hortifrútis.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+
+// MÉDIO PRODUTOR
+
+else if(porte == 'medio'){
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>🌽 Milho</h3>
+
+<p>
+
+✅ Forte produção regional.<br><br>
+
+💰 Pode virar:
+ração e farinha.<br><br>
+
+🛒 Cooperativas agrícolas.
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h3>🌱 Erva-mate</h3>
+
+<p>
+
+✅ Excelente no clima frio.<br><br>
+
+💰 Produção de chá e tereré.<br><br>
+
+🛒 Indústrias e mercados.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+
+// GRANDE PRODUTOR
+
+else{
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>🌾 Soja</h3>
+
+<p>
+
+✅ Excelente para grandes áreas.<br><br>
+
+💰 Alta demanda mundial.<br><br>
+
+🛒 Exportação e cooperativas.
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h3>🌽 Milho em larga escala</h3>
+
+<p>
+
+✅ Forte produtividade.<br><br>
+
+💰 Mercado constante.<br><br>
+
+🛒 Agroindústrias.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+}
+
+
+// ======================================
+// CURITIBA
+// ======================================
+
+else if(cidade.includes('curitiba')){
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>🥬 Hortaliças</h3>
+
+<p>
+
+✅ Excelente para agricultura urbana.<br><br>
+
+🛒 Venda local e feiras.
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h3>🍅 Tomate</h3>
+
+<p>
+
+✅ Boa adaptação climática.<br><br>
+
+🛒 Restaurantes e mercados.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+
+// ======================================
+// SALVADOR / BAHIA
+// ======================================
+
+else if(
+cidade.includes('salvador') ||
+cidade.includes('bahia')
+){
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>🥥 Coco</h3>
+
+<p>
+
+✅ Clima tropical perfeito.<br><br>
+
+💰 Água de coco e doces.<br><br>
+
+🛒 Praias e mercados.
+
+</p>
+
+</div>
+
+<div class="cultivo-card">
+
+<h3>🍫 Cacau</h3>
+
+<p>
+
+✅ Forte produção regional.<br><br>
+
+💰 Chocolates artesanais.<br><br>
+
+🛒 Indústrias e lojas.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+
+// ======================================
+// NÃO ENCONTRADA
+// ======================================
+
+else{
+
+resultado.innerHTML = `
+
+<div class="cultivo-card">
+
+<h3>⚠️ Região ainda não cadastrada</h3>
+
+<p>
+
+Em breve teremos mais cidades
+e recomendações agrícolas.
+
+</p>
+
+</div>
+
+`;
+
+}
 
 }
