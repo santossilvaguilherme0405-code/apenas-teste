@@ -700,11 +700,228 @@ function analisarCidade(){
 const cidade = document
 .getElementById('cidadeInput')
 .value
-.toLowerCase();
+.toLowerCase()
+.trim();
 
 const resultado = document
 .getElementById('resultadoCidade');
 
+
+// LISTA DE CIDADES DO PARANÁ
+
+const cidades = {
+
+"guarapuava": {
+culturas: "Erva-mate, soja, milho, trigo, batata e morango.",
+clima: "Clima frio com geadas frequentes.",
+venda: "Feiras rurais, cooperativas e mercados locais."
+},
+
+"curitiba": {
+culturas: "Hortaliças, flores, morango e alface.",
+clima: "Clima úmido e frio.",
+venda: "Feiras urbanas e mercados municipais."
+},
+
+"londrina": {
+culturas: "Café, soja, milho e frutas.",
+clima: "Clima subtropical quente.",
+venda: "Mercados regionais e cooperativas."
+},
+
+"maringa": {
+culturas: "Soja, milho, cana e frutas tropicais.",
+clima: "Clima quente e produtivo.",
+venda: "Cooperativas agrícolas."
+},
+
+"cascavel": {
+culturas: "Soja, milho, trigo e aves.",
+clima: "Clima ideal para grãos.",
+venda: "Exportação e cooperativas."
+},
+
+"ponta grossa": {
+culturas: "Batata, trigo, cevada e soja.",
+clima: "Clima frio e úmido.",
+venda: "Feiras e indústrias."
+},
+
+"foz do iguaçu": {
+culturas: "Mandioca, frutas e hortaliças.",
+clima: "Clima quente e úmido.",
+venda: "Turismo e mercados locais."
+},
+
+"guaratuba": {
+culturas: "Banana, palmito e mandioca.",
+clima: "Litorâneo e úmido.",
+venda: "Feiras locais e turismo."
+},
+
+"guaíra": {
+culturas: "Soja, milho e mandioca.",
+clima: "Clima quente.",
+venda: "Cooperativas agrícolas."
+},
+
+"toledo": {
+culturas: "Milho, soja e criação de aves.",
+clima: "Subtropical.",
+venda: "Frigoríficos e cooperativas."
+},
+
+"paranavaí": {
+culturas: "Laranja, mandioca e cana.",
+clima: "Quente.",
+venda: "Indústrias e mercados."
+},
+
+"umuarama": {
+culturas: "Mandioca, soja e milho.",
+clima: "Quente e seco.",
+venda: "Feiras e cooperativas."
+},
+
+"campo mourão": {
+culturas: "Soja, trigo e milho.",
+clima: "Subtropical.",
+venda: "Cooperativas."
+},
+
+"irati": {
+culturas: "Erva-mate, feijão e milho.",
+clima: "Frio.",
+venda: "Mercados locais."
+},
+
+"união da vitória": {
+culturas: "Erva-mate, pinus e hortaliças.",
+clima: "Frio e úmido.",
+venda: "Madeireiras e feiras."
+},
+
+"francisco beltrão": {
+culturas: "Milho, soja e aves.",
+clima: "Subtropical.",
+venda: "Cooperativas."
+},
+
+"pato branco": {
+culturas: "Soja, trigo e hortaliças.",
+clima: "Frio moderado.",
+venda: "Mercados e cooperativas."
+},
+
+"apucarana": {
+culturas: "Café, milho e soja.",
+clima: "Subtropical.",
+venda: "Mercados regionais."
+},
+
+"arapongas": {
+culturas: "Milho, soja e café.",
+clima: "Quente.",
+venda: "Cooperativas."
+},
+
+"telêmaco borba": {
+culturas: "Pinus, eucalipto e milho.",
+clima: "Úmido.",
+venda: "Indústria madeireira."
+},
+
+"castro": {
+culturas: "Leite, soja e milho.",
+clima: "Frio.",
+venda: "Laticínios e cooperativas."
+},
+
+"lapa": {
+culturas: "Batata, milho e feijão.",
+clima: "Frio.",
+venda: "Feiras agrícolas."
+},
+
+"prudentópolis": {
+culturas: "Erva-mate, feijão e milho.",
+clima: "Frio.",
+venda: "Mercados locais."
+},
+
+"pinhão": {
+culturas: "Erva-mate, pinus e soja.",
+clima: "Frio.",
+venda: "Madeireiras e feiras."
+},
+
+"reserva": {
+culturas: "Milho, feijão e soja.",
+clima: "Subtropical.",
+venda: "Cooperativas."
+},
+
+"pitanga": {
+culturas: "Soja, milho e trigo.",
+clima: "Frio moderado.",
+venda: "Mercados rurais."
+},
+
+"candói": {
+culturas: "Soja, milho e erva-mate.",
+clima: "Frio.",
+venda: "Cooperativas."
+},
+
+"turvo": {
+culturas: "Erva-mate, milho e feijão.",
+clima: "Frio e úmido.",
+venda: "Feiras locais."
+}
+
+};
+
+// VERIFICA SE EXISTE
+
+if(cidades[cidade]){
+
+resultado.innerHTML = `
+
+<h3>🌱 Cultivos indicados para ${cidade}</h3>
+
+<p><b>🌾 Culturas:</b>
+${cidades[cidade].culturas}</p>
+
+<p><b>🌦️ Clima:</b>
+${cidades[cidade].clima}</p>
+
+<p><b>🛒 Onde vender:</b>
+${cidades[cidade].venda}</p>
+
+`;
+
+}else{
+
+resultado.innerHTML = `
+
+<h3>❌ Cidade não encontrada</h3>
+
+<p>
+Digite uma cidade paranaense cadastrada.
+</p>
+
+<p>
+Exemplos:
+Guarapuava, Curitiba, Cascavel,
+Londrina, Maringá, Ponta Grossa
+ou Foz do Iguaçu.
+</p>
+
+`;
+
+}
+
+}
 
 // =====================================
 // GUARAPUAVA
