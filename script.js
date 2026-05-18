@@ -732,31 +732,29 @@ resultado.innerHTML = `
 
 <div class="cultivo-card">
 
-<h4>🍓 Morango</h4>
-
-<p>
-
-💰 Lucro: Alto <br>
-🌡️ Clima ideal: Frio <br>
-⏳ Colheita: 60 a 90 dias <br>
-🏪 Venda:
-Feiras, mercados e docerias
-
-</p>
-
-</div>
-
 <div class="cultivo-card">
 
-<h4>🌿 Erva-mate</h4>
+<h3>🍓 Morango</h3>
 
 <p>
 
-💰 Lucro: Alto <br>
-🌡️ Clima ideal: Frio e úmido <br>
-⏳ Produção duradoura <br>
-🏪 Venda:
-Indústrias e cooperativas
+🌡️ Clima ideal:
+Frio e ameno.<br><br>
+
+⏳ Tempo de colheita:
+60 a 80 dias.<br><br>
+
+💰 Lucro estimado:
+ALTO.<br><br>
+
+📦 Produtos derivados:
+geleia, polpa, doces, bolo e suco.<br><br>
+
+🛒 Onde vender:
+feiras, mercados, docerias e vendas locais.<br><br>
+
+📏 Área recomendada:
+pequenas propriedades.
 
 </p>
 
