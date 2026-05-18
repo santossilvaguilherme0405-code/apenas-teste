@@ -1093,21 +1093,49 @@ ração e farinha.<br><br>
 
 <h3>🌱 Erva-mate</h3>
 
-<p>
+<div class="info-item">
 
-✅ Excelente no clima frio.<br><br>
-
-💰 Produção de chá e tereré.<br><br>
-
-🛒 Indústrias e mercados.
-
-</p>
+<b>🌡️ Clima ideal:</b>
+Frio e úmido
 
 </div>
 
-`;
+<div class="info-item">
 
-}
+<b>⏳ Colheita:</b>
+3 a 5 anos
+
+</div>
+
+<div class="info-item">
+
+<b>💰 Lucro:</b>
+Médio/Alto
+
+</div>
+
+<div class="info-item">
+
+<b>📦 Produtos:</b>
+chá, tereré e erva beneficiada
+
+</div>
+
+<div class="info-item">
+
+<b>🛒 Vendas:</b>
+cooperativas e indústrias
+
+</div>
+
+<div class="info-item">
+
+<b>📏 Área ideal:</b>
+médias propriedades
+
+</div>
+
+</div>
 
 
 // GRANDE PRODUTOR
@@ -1118,41 +1146,51 @@ resultado.innerHTML = `
 
 <div class="cultivo-card">
 
-<h3>🌾 Soja</h3>
+<h3>🌽 Milho</h3>
 
-<p>
+<div class="info-item">
 
-✅ Excelente para grandes áreas.<br><br>
-
-💰 Alta demanda mundial.<br><br>
-
-🛒 Exportação e cooperativas.
-
-</p>
+<b>🌡️ Clima ideal:</b>
+Moderado e quente
 
 </div>
 
-<div class="cultivo-card">
+<div class="info-item">
 
-<h3>🌽 Milho em larga escala</h3>
-
-<p>
-
-✅ Forte produtividade.<br><br>
-
-💰 Mercado constante.<br><br>
-
-🛒 Agroindústrias.
-
-</p>
+<b>⏳ Colheita:</b>
+90 a 120 dias
 
 </div>
 
-`;
+<div class="info-item">
 
-}
+<b>💰 Lucro:</b>
+Médio
 
-}
+</div>
+
+<div class="info-item">
+
+<b>📦 Produtos:</b>
+ração, farinha, óleo e alimentos
+
+</div>
+
+<div class="info-item">
+
+<b>🛒 Vendas:</b>
+cooperativas e cerealistas
+
+</div>
+
+<div class="info-item">
+
+<b>📏 Área ideal:</b>
+médias e grandes propriedades
+
+</div>
+
+</div>
 
 
 // ======================================
